@@ -1,6 +1,6 @@
 # {{ project.name|raw }}
 
-{# TODO ToC #}
+{% include 'toc.md.twig' %}
 
 {% for class in project.indexes.classes|sort_asc %}
 {% if not class.abstract %}
