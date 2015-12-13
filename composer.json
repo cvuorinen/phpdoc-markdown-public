@@ -12,5 +12,10 @@
     ],
     "require": {
         "phpdocumentor/phpdocumentor": "~2.8.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Cvuorinen\\PhpdocMarkdownPublic\\": "src"
+        }
     }
 }
