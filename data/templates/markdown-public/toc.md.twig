@@ -3,11 +3,8 @@
 {% for class in project.indexes.classes|sort_asc %}
 {% if not class.abstract %}
 * {{ anchorLink(class.name) }}
-{% set specialMethods = class.magicMethods ? class.inheritedMethods.merge(class.magicMethods) : class.inheritedMethods %}
-{% for method in class.methods.merge(specialMethods) %}
-{% if method.visibility == 'public' %}
+{% for method in publicMethods(class) %}
     * {{ anchorLink(method.name) }}
-{% endif %}
 {% endfor %}
 {% endif %}
 {% endfor %}

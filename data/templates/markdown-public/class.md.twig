@@ -24,9 +24,7 @@
 
 {% endif %}{# class.tags.see || class.tags.link #}
 
-{% set specialMethods = class.magicMethods ? class.inheritedMethods.merge(class.magicMethods) : class.inheritedMethods %}
-{% for method in class.methods.merge(specialMethods) %}
-{% if method.visibility == 'public' %}
+{% for method in publicMethods(class) %}
 
 ### {{ method.name }}
 
@@ -81,5 +79,4 @@
 
 ---
 
-{% endif %}{# method.visibility == 'public' #}
 {% endfor %}{# method in class.methods #}
