@@ -1,6 +1,6 @@
 # phpDocumentor markdown-public template
 
-[phpDocumentor](http://www.phpdoc.org/) template that generates Markdown documentation of only the public API, it will skip all abstract classes and non-public methods.
+[phpDocumentor template](http://www.phpdoc.org/docs/latest/getting-started/changing-the-look-and-feel.html) that generates Markdown documentation of only the public API. It will skip all abstract classes and non-public methods.
 
 The main use-case for this template is to generate simple and nice looking usage documentation, that can then be published on GitHub.
 
@@ -20,7 +20,7 @@ composer require cvuorinen/phpdoc-markdown-public
 
 Run phpDocumentor and set template as `vendor/cvuorinen/phpdoc-markdown-public/data/templates/markdown-public`.
 
-Example using command-line arguments:
+**Example using command-line arguments:**
 
 ```bash
 ./vendor/bin/phpdoc --directory=src/ --target=docs/ --template="vendor/cvuorinen/phpdoc-markdown-public/data/templates/markdown-public" --title="My Project Documentation"
@@ -28,7 +28,7 @@ Example using command-line arguments:
 
 More information about the available arguments can be found at [running phpDocumentor](http://www.phpdoc.org/docs/latest/guides/running-phpdocumentor.html).
 
-Example using configuration file:
+**Example using configuration file:**
 
 Add a file called `phpdoc.xml` with the following content to the root of your project and invoke the `phpdoc` command without arguments. Modify the configuration to suit your project.
 
