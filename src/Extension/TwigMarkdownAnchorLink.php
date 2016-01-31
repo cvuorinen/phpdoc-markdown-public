@@ -6,16 +6,24 @@ use Twig_Extension;
 use Twig_SimpleFunction;
 
 /**
- * Twig extension to create Markdown anchor links.
+ * Twig extension to create Markdown anchor links (within a single page).
+ *
+ * Links need to be created in the same order as the anchors appear in the document, so that links with
+ * same title will be correctly suffixed with a numeric index.
  *
  * Adds the following function:
  *
- *  anchorLink(string title)
+ *  anchorLink(string title): string
  */
 class TwigMarkdownAnchorLink extends Twig_Extension
 {
     const NAME = 'TwigMarkdownAnchorLink';
 
+    /**
+     * Keep track of the created links so we can check if a link with the same title already exists.
+     *
+     * @var array
+     */
     private static $links = array();
 
     /**

@@ -8,11 +8,11 @@ use Twig_Extension;
 use Twig_SimpleFunction;
 
 /**
- * Twig extension to create Markdown anchor links.
+ * Twig extension to get only the public methods from a \phpDocumentor\Descriptor\ClassDescriptor instance.
  *
  * Adds the following function:
  *
- *  publicMethods(\phpDocumentor\Descriptor\ClassDescriptor class)
+ *  publicMethods(\phpDocumentor\Descriptor\ClassDescriptor class): \phpDocumentor\Descriptor\MethodDescriptor[]
  */
 class TwigClassPublicMethods extends Twig_Extension
 {
