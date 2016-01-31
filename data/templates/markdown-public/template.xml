@@ -9,7 +9,7 @@
     <transformation writer="twig" source="templates/markdown-public/index.md.twig" artifact="README.md" />
   </transformations>
   <parameters>
-    <parameter key="twig-debug">true</parameter>
+    <!--<parameter key="twig-debug">true</parameter>-->
     <parameter key="twig-extension">Cvuorinen\PhpdocMarkdownPublic\Extension\TwigMarkdownAnchorLink</parameter>
     <parameter key="twig-extension">Cvuorinen\PhpdocMarkdownPublic\Extension\TwigClassPublicMethods</parameter>
   </parameters>
