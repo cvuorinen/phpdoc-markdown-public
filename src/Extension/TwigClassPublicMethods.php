@@ -10,9 +10,9 @@ use Twig_SimpleFunction;
 /**
  * Twig extension to get only the public methods from a \phpDocumentor\Descriptor\ClassDescriptor instance.
  *
- * Adds the following function:
+ * Adds the following function to Twig:
  *
- *  publicMethods(\phpDocumentor\Descriptor\ClassDescriptor class): \phpDocumentor\Descriptor\MethodDescriptor[]
+ *  publicMethods(ClassDescriptor class): MethodDescriptor[]
  */
 class TwigClassPublicMethods extends Twig_Extension
 {
@@ -54,7 +54,7 @@ class TwigClassPublicMethods extends Twig_Extension
         return array_filter(
             $methods->getAll(),
             function (MethodDescriptor $method) {
-                return $method->getVisibility() == 'public';
+                return $method->getVisibility() === 'public';
             }
         );
     }
