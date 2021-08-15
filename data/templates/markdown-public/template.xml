@@ -1,16 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <template>
-  <author>Carl Vuorinen</author>
-  <email>carl.vuorinen@gmail.com</email>
-  <version>1.0.0</version>
-  <copyright>Carl Vuorinen 2015</copyright>
   <description>Generate usage documentation (documents only it's public API) for a small library in Markdown format so it can be published in GitHub.</description>
   <transformations>
     <transformation writer="twig" source="templates/markdown-public/index.md.twig" artifact="README.md" />
   </transformations>
   <parameters>
     <!--<parameter key="twig-debug">true</parameter>-->
-    <parameter key="twig-extension">Cvuorinen\PhpdocMarkdownPublic\Extension\TwigMarkdownAnchorLink</parameter>
-    <parameter key="twig-extension">Cvuorinen\PhpdocMarkdownPublic\Extension\TwigClassPublicMethods</parameter>
   </parameters>
 </template>

@@ -1,18 +1,16 @@
 {
-    "name": "cvuorinen/phpdoc-markdown-public",
-    "description": "phpDocumentor template that generates Markdown documentation of the public API",
+    "name": "onspli/phpdoc-markdown-public",
+    "description": "Generate usage documentation (documents only it's public API) for a small library in Markdown format so it can be published in GitHub.",
     "keywords" : [ "PHPDoc", "phpDocumentor", "Documentation", "Markdown" ],
-    "homepage" : "https://github.com/cvuorinen/phpdoc-markdown-public",
     "license": "MIT",
     "authors": [
-        {
-            "name": "Carl Vuorinen",
-            "email": "carl.vuorinen@gmail.com"
-        }
-    ],
-    "autoload": {
-        "psr-4": {
-            "Cvuorinen\\PhpdocMarkdownPublic\\": "src"
-        }
-    }
+      {
+          "name": "Ondřej Šplíchal",
+          "email": "ondrej.splichal@gmail.com"
+      },
+      {
+          "name": "Carl Vuorinen",
+          "email": "carl.vuorinen@gmail.com"
+      }
+    ]
 }
