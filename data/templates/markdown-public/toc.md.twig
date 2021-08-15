@@ -5,7 +5,7 @@
 * [{{ class.name }}](#{{ class.name }}) {{ class.summary|raw }}
 {% for method in class.methods %}
 {% if method.visibility == 'public' %}
-    * [{{ class.name }}::{{ method.name }}](#{{ class.name }}::{{ method.name }}) {{ method.summary|raw }}
+    * [{{ class.name }}::{{ method.name }}](#{{ class.name }}{{ method.name }}) {{ method.summary|raw }}
 {% endif %}
 {% endfor %}
 {% endif %}
