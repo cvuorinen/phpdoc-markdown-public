@@ -10,9 +10,6 @@
             "email": "carl.vuorinen@gmail.com"
         }
     ],
-    "require": {
-        "phpdocumentor/phpdocumentor": "~2.8"
-    },
     "autoload": {
         "psr-4": {
             "Cvuorinen\\PhpdocMarkdownPublic\\": "src"
