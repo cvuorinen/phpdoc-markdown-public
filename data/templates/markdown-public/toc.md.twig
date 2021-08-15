@@ -2,10 +2,10 @@
 
 {% for class in project.indexes.classes|sort_asc %}
 {% if not class.abstract %}
-* [{{ class.name }}](#{{ class.name }})
+* [{{ class.name }}](#{{ class.name }}) {{ class.summary|raw }}
 {% for method in class.methods %}
 {% if method.visibility == 'public' %}
-    * [{{ method.name }}](#{{ method.name }})
+    * [{{ class.name }}::{{ method.name }}](#{{ class.name }}::{{ method.name }}) {{ method.summary|raw }}
 {% endif %}
 {% endfor %}
 {% endif %}
