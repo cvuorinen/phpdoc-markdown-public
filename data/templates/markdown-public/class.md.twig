@@ -24,6 +24,8 @@
 
 {% endif %}{# class.tags.see || class.tags.link #}
 
-{% for method in publicMethods(class) %}
+{% for method in class.methods %}
+{% if method.visibility == 'public' %}
 {% include 'method.md.twig' %}
+{% endif %}
 {% endfor %}

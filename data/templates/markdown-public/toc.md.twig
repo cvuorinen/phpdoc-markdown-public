@@ -2,9 +2,11 @@
 
 {% for class in project.indexes.classes|sort_asc %}
 {% if not class.abstract %}
-* {{ anchorLink(class.name) }}
-{% for method in publicMethods(class) %}
-    * {{ anchorLink(method.name) }}
+* [{{ class.name }}](#{{ class.name }})
+{% for method in class.methods %}
+{% if method.visibility == 'public' %}
+    * [{{ method.name }}](#{{ method.name }})
+{% endif %}
 {% endfor %}
 {% endif %}
 {% endfor %}
